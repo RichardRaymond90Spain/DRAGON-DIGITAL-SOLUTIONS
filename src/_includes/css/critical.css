@@ -83,7 +83,7 @@ main {
 footer {
   padding: 3rem 0;
   background-color: var(--dark-accent);
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 
 .footer-content {

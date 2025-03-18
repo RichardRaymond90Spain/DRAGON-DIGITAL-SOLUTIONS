@@ -106,7 +106,7 @@
         footer {
             padding: 3rem 0;
             background-color: var(--dark-accent);
-            margin-top: 4rem;
+            margin-top: 1rem;
         }
 
         .footer-content {
@@ -130,11 +130,17 @@
             border-radius: 50%;
             background-color: var(--dark-accent);
             transition: var(--transition);
+            color: var(--text);
         }
 
         .social-links a:hover {
             background-color: var(--primary);
             transform: translateY(-3px);
+            color: var(--text);
+        }
+        
+        .social-links a svg {
+            stroke: currentColor;
         }
 
         @media (max-width: 768px) {
