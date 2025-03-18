@@ -3,7 +3,7 @@
   min-height: calc(100vh - 72px);
   display: flex;
   align-items: center;
-  padding: 6rem 0;
+  padding: 1rem 0;
   background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.8)), url('/assets/images/hero-bg.webp');
   background-size: cover;
   background-position: center;
@@ -52,7 +52,7 @@
 
 /* --- Section Styling --- */
 .section {
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 
 .section-header {

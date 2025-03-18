@@ -223,13 +223,39 @@ description: We help businesses thrive with cutting-edge eCommerce, AI, and web 
     
     /* Media query for mobile responsiveness */
     @media (max-width: 768px) {
+      .hero {
+        padding: 1rem 0 1rem 0;
+      }
+      
       .hero .container {
         flex-direction: column;
       }
       
+      .hero-content {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      
       .hero-illustration {
-        max-width: 100%;
-        margin-top: 2rem;
+        max-width: 85%;
+        margin: 0 auto;
+        order: -1; /* Move illustration above the content */
+        margin-bottom: 1.5rem;
+        transform: scale(0.85); /* Slightly smaller on mobile */
+      }
+      
+      /* Adjust SVG size */
+      .digital-transformation {
+        max-height: 220px;
+      }
+      
+      /* Adjust animation speed on mobile */
+      .path {
+        animation-duration: 10s;
+      }
+      
+      .pulse {
+        animation-duration: 2s;
       }
     }
   </style>
