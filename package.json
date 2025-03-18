@@ -1,0 +1,23 @@
+{
+  "name": "dragon-digital-solutions",
+  "version": "1.0.0",
+  "description": "Future-Ready Digital Solutions Agency Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [
+    "agency",
+    "digital",
+    "website"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "clean-css": "^5.3.2",
+    "html-minifier": "^4.0.0",
+    "terser": "^5.16.8"
+  }
+} 
