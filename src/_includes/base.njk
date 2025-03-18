@@ -77,6 +77,14 @@
             font-size: 1.5rem;
             color: var(--primary);
         }
+        
+        .logo a {
+            color: var(--primary);
+        }
+        
+        .logo a:hover {
+            color: var(--secondary);
+        }
 
         nav ul {
             display: flex;
@@ -148,7 +156,9 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">Dragon Digital Solutions</div>
+            <div class="logo">
+                <a href="/">Dragon Digital Solutions</a>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#services">Services</a></li>
@@ -167,7 +177,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="copyright">
-                    © 2023 Dragon Digital Solutions. All rights reserved.
+                    © <span id="currentYear"></span> Dragon Digital Solutions. All rights reserved.
                 </div>
                 <div class="social-links">
                     <a href="https://twitter.com/" aria-label="Twitter/X" target="_blank" rel="noopener">
@@ -188,5 +198,9 @@
     </footer>
     
     <script src="/assets/js/main.js" defer></script>
+    <script>
+        // Set the current year in the footer copyright
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html> 
