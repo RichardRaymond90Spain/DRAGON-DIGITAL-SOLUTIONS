@@ -80,6 +80,9 @@
         
         .logo a {
             color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         
         .logo a:hover {
@@ -154,6 +157,17 @@
                 display: none;
             }
         }
+
+        .logo img {
+            display: block;
+            max-height: 40px;
+            width: auto;
+        }
+
+        .logo span {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
     </style>
     
     <!-- Non-critical CSS -->
@@ -163,7 +177,10 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="/">Dragon Digital Solutions</a>
+                <a href="/">
+                    <img src="/assets/images/dds_logo.svg" alt="Dragon Digital Solutions" width="60" height="auto">
+                    <span>Dragon Digital Solutions</span>
+                </a>
             </div>
             <nav>
                 <ul>
