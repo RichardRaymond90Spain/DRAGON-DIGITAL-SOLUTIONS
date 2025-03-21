@@ -104,6 +104,37 @@
         nav ul li a {
             font-weight: 600;
         }
+        
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 101;
+        }
+        
+        .mobile-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--text);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+        
+        .mobile-toggle.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+        
+        .mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-toggle.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
 
         main {
             margin-top: 72px; /* Header height */
@@ -158,6 +189,33 @@
             
             nav ul {
                 display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: var(--bg);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 100;
+                padding: 1rem;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 1.5rem 0;
+            }
+            
+            nav ul li a {
+                font-size: 1.5rem;
+            }
+            
+            .mobile-toggle {
+                display: flex;
             }
         }
 
@@ -186,11 +244,16 @@
                 </a>
             </div>
             <nav>
-                <ul>
+                <ul id="mobile-menu">
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="mobile-toggle" id="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
     </header>
@@ -206,14 +269,21 @@
                     © <span id="currentYear"></span> Dragon Digital Solutions. All rights reserved.
                 </div>
                 <div class="social-links">
-                    <a href="https://twitter.com/" aria-label="Twitter/X" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                    <a href="https://x.com/DragonSoultions" aria-label="X (formerly Twitter)" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4l7.2 8.5L4 20h1.6l6.2-6.2L16.9 20h3.8l-7.9-9.3L19.5 4h-1.6l-5.6 5.6L8.2 4H4zm2.3 1.5h1.2l10.1 13h-1.2l-10.1-13z"/>
+                        </svg>
                     </a>
-                    <a href="https://linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <a href="https://www.linkedin.com/in/dragon-digital-solutions-645582357" aria-label="LinkedIn" target="_blank" rel="noopener">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                     </a>
-                    <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+                    <a href="https://www.instagram.com/dragondigitalsolutions/" aria-label="Instagram" target="_blank" rel="noopener">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@dragin.digital.so" aria-label="TikTok" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm10-6h-4v8.58l.99-.79a4 4 0 1 0-1.56 7.21 4 4 0 0 0 5.57-3.42V2h-4v4h4v.29z"/>
+                        </svg>
                     </a>
                 </div>
                 <div class="privacy-policy">
@@ -227,6 +297,22 @@
     <script>
         // Set the current year in the footer copyright
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        document.getElementById('mobile-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('mobile-menu').classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-toggle').classList.remove('active');
+                document.getElementById('mobile-menu').classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
     </script>
 </body>
 </html> 
