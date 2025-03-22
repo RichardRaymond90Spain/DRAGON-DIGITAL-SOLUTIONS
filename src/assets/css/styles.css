@@ -357,7 +357,7 @@
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  height: 250px;
+  height: 310px;
 }
 
 .portfolio-img {
@@ -591,7 +591,7 @@
 /* Adjust the size of portfolio items in the grid */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increasing from likely previous size */
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Increasing from likely previous size */
   gap: 2rem; /* Ensure adequate spacing between items */
 }
 
