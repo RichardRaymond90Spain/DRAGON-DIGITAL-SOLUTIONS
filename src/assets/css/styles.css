@@ -451,6 +451,18 @@
   height: 20px;
 }
 
+.phone-btn {
+  background: #00B33C; /* Darker, more saturated green for better contrast */
+  margin-left: 15px;
+  color: #FFFFFF; /* Explicitly setting white text */
+  font-weight: 700; /* Making text bolder for better visibility */
+}
+
+.phone-btn:hover {
+  background-color: #00CC44; /* Slightly lighter green on hover */
+  color: #FFFFFF; /* Ensuring text stays white on hover */
+}
+
 /* Responsive Adjustments */
 @media (max-width: 992px) {
   .hero h1 {
@@ -599,10 +611,6 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
   overflow: hidden;
-}
-.phone-btn {
-  background: #4CAF50; /* Example color matching your theme */
-  margin-left: 15px;
 }
 
 .contact-buttons {
