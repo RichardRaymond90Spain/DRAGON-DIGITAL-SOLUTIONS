@@ -600,3 +600,33 @@
   border-radius: 8px;
   overflow: hidden;
 }
+.phone-btn {
+  background: #4CAF50; /* Example color matching your theme */
+  margin-left: 15px;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .contact-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .email-btn,
+  .phone-btn {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+  
+  .email-btn {
+    margin-bottom: 10px;
+  }
+}
