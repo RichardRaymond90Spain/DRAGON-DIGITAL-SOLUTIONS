@@ -7,6 +7,16 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/assets/images');
   eleventyConfig.addPassthroughCopy('./src/assets/js');
   eleventyConfig.addPassthroughCopy('./src/assets/css');
+  eleventyConfig.addPassthroughCopy('./src/robots.txt');
+
+  // Add date filter for sitemap
+  eleventyConfig.addFilter('date', function(date, format) {
+    if (format === "YYYY-MM-DD") {
+      const now = new Date();
+      return now.toISOString().split('T')[0];
+    }
+    return date;
+  });
 
   // Minify CSS
   eleventyConfig.addFilter('cssmin', function(code) {
