@@ -6,6 +6,23 @@
     <title>{{ title | default("Dragon Digital Solutions - Future-Ready Digital Solutions") }}</title>
     <meta name="description" content="{{ description | default("We help businesses thrive with cutting-edge eCommerce, AI, and web solutions.") }}">
     
+    <!-- Add your schema markup here -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Dragon Digital Solutions",
+      "url": "https://dragondigitalsolutions.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+34-851-000-897",
+        "contactType": "Customer Service",
+        "areaServed": "ES",
+        "availableLanguage": ["English", "Spanish"]
+      }
+    }
+    </script>
+    
     <!-- Simplified favicon -->
     <link rel="icon" href="/assets/images/favicon_io/favicon.ico" type="image/png">
     
@@ -223,6 +240,31 @@
         .logo span {
             font-weight: 700;
             font-size: 1.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .service-card {
+            padding: 2rem;
+            background: var(--dark-accent);
+            border-radius: 8px;
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
         }
     </style>
     
