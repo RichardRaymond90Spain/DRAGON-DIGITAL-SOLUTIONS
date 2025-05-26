@@ -15,7 +15,7 @@
       "url": "https://dragondigitalsolutions.com",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+34-851-000-897",
+        "telephone": "{{ phone }}",
         "contactType": "Customer Service",
         "areaServed": "ES",
         "availableLanguage": ["English", "Spanish"]
@@ -260,6 +260,18 @@
             height: 100%;
         }
 
+        .service-card a {
+            display: block;
+            height: 100%;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
         @media (max-width: 768px) {
             .services-grid {
                 grid-template-columns: 1fr;
@@ -280,18 +292,7 @@
                     <span>Dragon Digital Solutions</span>
                 </a>
             </div>
-            <nav>
-                <ul id="mobile-menu">
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="mobile-toggle" id="mobile-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
+            {% include "Component/navbar.njk" %}
         </div>
     </header>
     
