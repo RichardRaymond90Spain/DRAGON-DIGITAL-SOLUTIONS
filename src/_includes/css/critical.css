@@ -124,4 +124,34 @@ footer {
   nav ul {
     display: none;
   }
+}
+
+/* Service Card Layout for Button at Bottom */
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #222;
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  padding: 2rem 1.5rem 2rem 1.5rem; /* uniform padding */
+  margin-bottom: 2rem;
+  min-height: 320px;
+  position: relative;
+}
+
+.service-card .btn {
+  margin-top: auto;
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.service-card-content {
+  padding-bottom: 3.5rem; /* height of the button + a little extra */
+}
+
+.service-icon {
+  color: var(--primary);
 } 
