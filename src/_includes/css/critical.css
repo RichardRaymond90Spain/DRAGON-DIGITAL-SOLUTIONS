@@ -154,4 +154,8 @@ footer {
 
 .service-icon {
   color: var(--primary);
+  fill: var(--primary);
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1.5rem;
 } 
